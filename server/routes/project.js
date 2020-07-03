@@ -38,10 +38,3 @@ module.exports = router;
 
 
 
-/* UPDATE BOOK */
-/* router.put('/:id', function(req, res, next) {
-    Book.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
-      if (err) return next(err);
-      res.json(post);
-    });
-  }); */
