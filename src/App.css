@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+h4 {
+  font-size: 45px;
+  color: blueviolet; 
+}
+
+.App-header {
+  background-image: url("./favicon.ico");
+  background-color: purple;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 80px;
+  color: orangered;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.navbar {
+ margin-top: auto;
+ height: 250px;
+  
+}
+#top-filler {
+  margin-bottom: auto;
+}
+
+#nav-container {
+  align-items: flex-end;
+  
+}
+p {
+  font-size: 45px;
+  color: blueviolet;
+}
+
+.SignupForm {
+  font-size: 45px;
+  color: blueviolet; 
+}
+.form-label {
+  font-size: 45px;
+  color: blueviolet; 
+}
+.h4 {
+  font-size: 45px;
+  color: blueviolet;
+}
+
+
