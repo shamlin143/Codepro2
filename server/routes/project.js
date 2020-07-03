@@ -15,26 +15,33 @@ router.route('/').post(function(req, res) {
 // Get all projects
 router.route('/').get(function(req, res){
     Project.find((err, projects) =>{
-        if(err) return res.status(422).json({'project': 'no projects found'});
+        if(err) return res.status(422).json({"project": "No projects found"});
         res.json(projects);
     });
 });
 
 router.route('/:id').delete(function(req, res){
     Project.findByIdAndRemove(req.params.id, req.body, function (err, post) {
-        if (err) return next(err);
+        if (err) return res.status(422).json({"project": "Unable to delete project"});
         res.json(post);
       });
 });
 
-/* router.delete('/:id', function(req, res, next) {
-    Book.findByIdAndRemove(req.params.id, req.body, function (err, post) {
-      if (err) return next(err);
-      res.json(post);
+router.route('/:id').put(function(req, res){
+    Project.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+        if (err) return res.status(422).json({"project": "Unable to update project"})
+        res.json(post);
     });
-  });
- */
+});
+
 module.exports = router;
 
 
 
+/* UPDATE BOOK */
+/* router.put('/:id', function(req, res, next) {
+    Book.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+      if (err) return next(err);
+      res.json(post);
+    });
+  }); */
