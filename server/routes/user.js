@@ -45,9 +45,9 @@ router.post(
         res.send(userInfo);
     }
 )
-
-router.get('/', (req, res, next) => {
-    console.log('===== user!!======')
+// Get all from project routeproject 
+router.get('/', (req, res ) => {
+    console.log('===== project ======')
     console.log(req.user)
     if (req.user) {
         res.json({ user: req.user })

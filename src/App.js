@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import { Route, Link } from 'react-router-dom'
+import axios from 'axios';
+import { Route, Link } from 'react-router-dom';
 // components
 import Signup from './pages/sign-up'
-import LoginForm from './pages/login-form'
-import Navbar from './components/navbar'
-import Home from './pages/home'
+import LoginForm from './pages/login-form';
+import ProjectBoard from './pages/project-board';
+import Navbar from './components/navbar';
+import Home from './pages/home';
 
 class App extends Component {
   constructor() {
@@ -74,6 +75,12 @@ class App extends Component {
           render={() =>
             <Signup/>}
         />
+        <Route
+          path="/project-board"
+          render={() =>
+            <ProjectBoard/>}
+        />
+
 
       </div>
     );
