@@ -3,11 +3,11 @@ import axios from 'axios';
 import { Route, Link } from 'react-router-dom';
 // components
 import Jumbotron from "./components/Jumbotron/Jumbotron";
-import Signup from './pages/sign-up'
-import LoginForm from './pages/login-form';
-import ProjectBoard from './pages/project-board';
+import Signup from './pages/SignUp/sign-up'
+import LoginForm from './pages/LoginForm/login-form';
+import ProjectBoard from './pages/ProjectBoard/project-board';
 import Navigationbar from './components/NavigationBar/NavigationBar';
-import Home from './pages/home';
+import Home from './pages/Home/home';
 
 class App extends Component {
   constructor() {

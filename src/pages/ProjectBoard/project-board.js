@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
-import API from "../utils/API";
-import SubmitProject from "../components/submit-project";
+import API from "../../utils/API";
+import SubmitProject from "../../components/SubmitProject/submit-project";
 
 
 
