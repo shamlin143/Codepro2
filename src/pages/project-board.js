@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import API from "../utils/API";
+import SubmitProject from "../components/submit-project";
 
 
 
@@ -26,6 +27,7 @@ return(
         {projects.map(project =>(
             <p key={project._id}>{project.projectName}</p>
         ))}
+        <SubmitProject/>
 
     </div>
 )
