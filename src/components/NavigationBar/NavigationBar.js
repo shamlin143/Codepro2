@@ -48,11 +48,11 @@ class NavigationBar extends Component {
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav  className="mr-auto" >
-                                            <Link to="#"  onClick={this.logout}>
-                                                <Button className="btn btn-link">Logout</Button> 
-                                            </Link>
                                             <Link to="/project-board">
                                                     <Button variant="outline-secondary">Project Board</Button>
+                                            </Link>
+                                            <Link to="#"  onClick={this.logout}>
+                                                <Button variant="outline-danger">Logout</Button> 
                                             </Link>
                                         </Nav>
                                     </Navbar.Collapse>
