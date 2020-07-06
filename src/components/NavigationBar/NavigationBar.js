@@ -52,7 +52,7 @@ class NavigationBar extends Component {
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav  className="mr-auto" >
                                             <Link to="/project-board">
-                                                    <Button variant="outline-secondary">Project Board</Button>
+                                                <Button variant="outline-secondary">Project Board</Button>
                                             </Link>
                                             <Link to="#"  onClick={this.logout}>
                                                 <Button variant="outline-danger">Logout</Button> 
