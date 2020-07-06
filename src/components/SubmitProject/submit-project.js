@@ -1,7 +1,8 @@
 import React, {useState} from  "react";
 import API from "../../utils/API";
 import { Container, Col,  Form } from 'react-bootstrap';
- 
+import './submit-project.css';
+import {Sidebar} from '../../components/sidebar/sidebar.js';
 
 
 
@@ -39,7 +40,9 @@ function SubmitProject(props){
 
 
     return(
+        <Sidebar>
         <Container className="submit-project text-center">
+        
              <Col className="col-4">
                 <Form>
                     <Form.Group>
@@ -96,9 +99,18 @@ function SubmitProject(props){
                         <Form.Label>Proposed Fee</Form.Label>
                         <Form.Control 
                             type="number"
-                            name="projectFee" 
+                            name="fee" 
                             onChange={handleInputChange}
                             placeholder="Optional"    
+                        />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Contact Email</Form.Label>
+                        <Form.Control 
+                            type="email"
+                            name="email" 
+                            onChange={handleInputChange}
+                            placeholder="email (required)"    
                         />
                     </Form.Group>
 
@@ -106,6 +118,7 @@ function SubmitProject(props){
                 </Form>
             </Col>
         </Container>
+        </Sidebar>
     );
     
     

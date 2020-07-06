@@ -9,6 +9,7 @@ const projectSchema = new Schema({
     appFeatures: {type: [String]},
     projectNotes: {type: String},
     fee: { type: String},
+    email: {type: String, required: true},
     date: { type: Date, default: Date.now }
 });
 
