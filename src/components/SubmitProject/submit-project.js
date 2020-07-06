@@ -40,10 +40,10 @@ function SubmitProject(props){
 
 
     return(
-        <Sidebar>
+        
+        <Sidebar >       
         <Container className="submit-project text-center">
         
-             <Col className="col-4">
                 <Form>
                     <Form.Group>
                         <Form.Label>Project Name</Form.Label>
@@ -115,12 +115,11 @@ function SubmitProject(props){
                     </Form.Group>
 
                     <button className="btn btn-success" onClick={addProject}>Submit</button>
-                </Form>
-            </Col>
+                </Form>            
         </Container>
         </Sidebar>
-    );
     
+    ) 
     
 
 }
