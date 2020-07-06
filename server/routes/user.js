@@ -3,20 +3,23 @@ const router = express.Router()
 const User = require('../database/models/user')
 const passport = require('../passport')
 
-router.post('/', (req, res) => {
-    console.log('user signup');
 
-    const { username, password } = req.body
+router.post('/', (req, res) => {
+    const {
+        username,
+        password
+    } = req.body
     // ADD VALIDATION
-    User.findOne({ username: username }, (err, user) => {
+    User.findOne({
+        username: username
+    }, (err, user) => {
         if (err) {
             console.log('User.js post error: ', err)
         } else if (user) {
             res.json({
                 error: `Sorry, already a user with the username: ${username}`
             })
-        }
-        else {
+        } else {
             const newUser = new User({
                 username: username,
                 password: password
@@ -45,24 +48,30 @@ router.post(
         res.send(userInfo);
     }
 )
-// Get all from project routeproject 
+// Get logged in user
+
 router.get('/', (req, res ) => {
     console.log('===== project ======')
     console.log(req.user)
     if (req.user) {
-        res.json({ user: req.user })
+        res.json({ user: req.user });
     } else {
-        res.json({ user: null })
+        res.json({ user: null });
     }
-})
+});
+
 
 router.post('/logout', (req, res) => {
     if (req.user) {
         req.logout()
-        res.send({ msg: 'logging out' })
+        res.send({
+            msg: 'logging out'
+        });
     } else {
-        res.send({ msg: 'no user to log out' })
+        res.send({
+            msg: 'no user to log out'
+        });
     }
-})
+});
 
 module.exports = router

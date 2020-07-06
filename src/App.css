@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 h4 {
@@ -24,23 +25,13 @@ h4 {
   font-size: large;
 }
 
-.navbar {
- margin-top: auto;
- height: 250px;
-  
-}
+
 #top-filler {
   margin-bottom: auto;
 }
 
-#nav-container {
-  align-items: flex-end;
-  
-}
-p {
-  font-size: 45px;
-  color: blueviolet;
-}
+
+
 
 .SignupForm {
   font-size: 45px;
