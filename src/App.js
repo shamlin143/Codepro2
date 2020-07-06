@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Route, Link } from 'react-router-dom';
 // components
-import Signup from './pages/sign-up'
-import LoginForm from './pages/login-form';
-import ProjectBoard from './pages/project-board';
-import Navbar from './components/navbar';
-import Home from './pages/home';
+import Jumbotron from "./components/Jumbotron/Jumbotron";
+import Signup from './pages/SignUp/sign-up'
+import LoginForm from './pages/LoginForm/login-form';
+import ProjectBoard from './pages/ProjectBoard/project-board';
+import Navigationbar from './components/NavigationBar/NavigationBar';
+import Home from './pages/Home/home';
 
 class App extends Component {
   constructor() {
@@ -53,13 +54,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-   
-        <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+        <Jumbotron/>
+        <Navigationbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
           <p>Your Future Begins Now, {this.state.username}!</p>
         }
-        {/* Routes to different components */}
         <Route
           exact path="/"
           component={Home} />
