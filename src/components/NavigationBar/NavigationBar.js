@@ -35,8 +35,9 @@ class NavigationBar extends Component {
         console.log(this.props);
         
         return (
-            <div>
-
+            
+            <Container className="text-center">
+               <Col className="text-center" > 
                 <header className="navbar App-header" id="nav-container">
                     <div className="col-8" >
                         {loggedIn ? (
@@ -84,8 +85,8 @@ class NavigationBar extends Component {
                     </div>
                 </header>
                 
-
-            </div>
+                </Col>
+            </Container>
 
         );
 

@@ -1,6 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, } from "react";
 import API from "../../utils/API";
 import SubmitProject from "../../components/SubmitProject/submit-project";
+import { set } from "mongoose";
+
+
 
 
 
@@ -19,18 +22,28 @@ function loadProjects(){
     })
 }
 
+function addProject(newProject){
+    setProjects(newProject);
+}
+
+
+    
+
 
 return(
-    <div className="project-board">
-        <h2>Project Board</h2>
-        {console.log(projects)}
-        {projects.map(project =>(
-            <p key={project._id}>{project.projectName}</p>
-        ))}
-        <SubmitProject/>
+        
+            <div className="project-board">
+                <h2>Project Board</h2>
+                {console.log(projects)}
+                {projects.map(project =>(
+                    <p key={project._id}>{project.projectName}</p>
+                ))}
+                
+                <SubmitProject value={projects} onClick={addProject}  />
 
-    </div>
-)
+            </div>
+       
+    )   
 
 }
 
