@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <div className="App">
         <Jumbotron />
-        <Navigationbar updateUser={this.updateUser} currentUser={this.state.username} loggedIn={this.state.loggedIn} />
+        <Navigationbar getUser={this.getUser} UserName={this.state.username} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
           <p>Your Future Begins Now, {this.state.username}!</p>

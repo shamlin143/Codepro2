@@ -3,11 +3,6 @@ import API from "../../utils/API";
 import SubmitProject from "../../components/SubmitProject/submit-project";
 
 
-
-
-
-
-
 function ProjectBoard(props) {
 console.log(props)
     const [projects, setProjects] = useState([]);
@@ -40,7 +35,7 @@ return(
                     <p key={project._id}>{project.projectName}</p>
                 ))}
                 
-                <SubmitProject value={projects} onClick={addProject}  />
+                <SubmitProject value={projects} onClick={addProject} userName={props.userName} />
 
             </div>
        

@@ -1,0 +1,15 @@
+.submit-project{
+   background-color: blue;
+    
+}
+
+#submit-project-form{
+    border: solid black 2px;
+    background-color: rgb(187, 184, 196);
+    
+}
+
+.form-label{
+    font-weight: bold;
+    font-size: 14pt;
+}

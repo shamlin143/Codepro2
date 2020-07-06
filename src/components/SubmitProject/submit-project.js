@@ -1,7 +1,8 @@
 import React, {useState} from  "react";
 import API from "../../utils/API";
 import { Container, Col,  Form } from 'react-bootstrap';
- 
+import "./styles.css"
+
 
 
 
@@ -20,14 +21,7 @@ function SubmitProject(props){
         console.log(project);
       };
 
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        if (project) {
-            API.saveProject(project)
-            .catch(err => console.log(err));
-         }     
-    }; 
-
+    
     function addProject() {
         
         if (project) {
@@ -39,9 +33,11 @@ function SubmitProject(props){
 
 
     return(
-        <Container className="submit-project text-center">
-             <Col className="col-4">
-                <Form>
+        <Container className="col-4 submit-project">
+             
+             <Col className="p-1">
+                <Form className='text-center  p-2' id="submit-project-form"> 
+                <h3>Submit Your Project</h3>
                     <Form.Group>
                         <Form.Label>Project Name</Form.Label>
                         <Form.Control 
@@ -57,7 +53,7 @@ function SubmitProject(props){
                             name="businessType" 
                             type="text" 
                             onChange={handleInputChange}
-                            placeholder="Enter Industry Typee"    
+                            placeholder="Enter Industry Type"    
                         />
                     </Form.Group>
                     <Form.Group>
@@ -66,7 +62,7 @@ function SubmitProject(props){
                             name="projectDescription" 
                             onChange={handleInputChange}
                             placeholder="Describe the  desired application"    
-                            rows="5"
+                            rows="2"
                         />
                     </Form.Group>
                     <Form.Group>
@@ -89,7 +85,7 @@ function SubmitProject(props){
                         <Form.Control as ="textarea"
                             name="projectNotes"  
                             onChange={handleInputChange}
-                            rows="3"
+                            rows="2"
                         />
                     </Form.Group>
                     <Form.Group>
