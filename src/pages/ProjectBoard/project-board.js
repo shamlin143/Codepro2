@@ -36,6 +36,7 @@ return(
                 <h2>Project Board</h2>
                 {console.log(projects)}
                 {projects.map(project =>(
+                    
                     <p key={project._id}>{project.projectName}</p>
                 ))}
                 
