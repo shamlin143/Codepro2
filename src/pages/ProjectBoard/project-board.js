@@ -1,14 +1,15 @@
 import React, {useState, useEffect, } from "react";
 import API from "../../utils/API";
 import SubmitProject from "../../components/SubmitProject/submit-project";
-import { set } from "mongoose";
 
 
 
 
 
-function ProjectBoard() {
 
+
+function ProjectBoard(props) {
+console.log(props)
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {

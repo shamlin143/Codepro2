@@ -6,7 +6,7 @@ const projectSchema = new Schema({
     userName: {type: String},
     userId: {type: String},
     businessType: {type: String},
-    appFeatures: {type: String},
+    appFeatures: {type: [String]},
     projectNotes: {type: String},
     fee: { type: String},
     date: { type: Date, default: Date.now }
