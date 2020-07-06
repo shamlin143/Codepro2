@@ -1,6 +1,7 @@
-
+import { Container, Col,  Form } from 'react-bootstrap';
 import "./sidebarStyle.css";
 import React from "react";
+import SubmitProject from "../SubmitProject/submit-project"
 
 export const Sidebar = ({ width, height, children }) => {
   const [xPosition, setX] = React.useState(-width);
@@ -8,8 +9,10 @@ export const Sidebar = ({ width, height, children }) => {
   const toggleMenu = () => {
     if (xPosition < 0) {
       setX(0);
+      console.log('xPosition', xPosition);
     } else {
       setX(-width);
+      console.log('xPosition', xPosition);
     }
   };
 

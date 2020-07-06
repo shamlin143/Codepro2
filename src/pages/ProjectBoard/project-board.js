@@ -2,10 +2,7 @@ import React, {useState, useEffect, } from "react";
 import API from "../../utils/API";
 import SubmitProject from "../../components/SubmitProject/submit-project";
 import "./project-board.css";
-import {Sidebar} from "../../components/sidebar/sidebar"
-
-
-
+// import {Sidebar} from "../../components/sidebar/sidebar"
 
 
 function ProjectBoard(props) {
@@ -28,19 +25,13 @@ function addProject(newProject){
 }
 
 return(        
-            <div className="project-board">
-                
-                    
-                    
-                    
-                    
-                
-                <h2 class="mx=5">Project Board</h2>
+            <div className="project-board">               
+                <h2 className="mx=5">Project Board</h2>
                 {console.log(projects)}
                 {projects.map(project =>(
-                    <div class="cardcontainer"> 
-                        <div class="row mx-5 my-4 ">
-                            <div class="card border border-info bg-success h-100">
+                    <div className="cardcontainer bg-success" > 
+                        <div className="row mx-5 my-4 ">
+                            <div className="card bg-success">
                                 <p key={project._id.projectName}>Project Name: {project.projectName}</p>
                                 <p key={project._id.businessType}>Business Type: {project.businessType}</p>
                                 <p key={project._id.projectDescription}>Project Description: {project.projectDescription}</p>
