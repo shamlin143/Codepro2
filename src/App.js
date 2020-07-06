@@ -54,15 +54,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Jumbotron/>
-        <Navigationbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+        <Jumbotron />
+        <Navigationbar updateUser={this.updateUser} currentUser={this.state.username} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
           <p>Your Future Begins Now, {this.state.username}!</p>
         }
         <Route
-          exact path="/"
-          component={Home} />
+          path="/"
+          render={() =>
+            <Home
+              updateUser={this.updateUser}
+              userName={this.state.username}
+            />}
+        />
         <Route
           path="/login"
           render={() =>
@@ -78,7 +83,10 @@ class App extends Component {
         <Route
           path="/project-board"
           render={() =>
-            <ProjectBoard/>}
+            <ProjectBoard
+              updateUser={this.updateUser}
+              userName={this.state.username}
+            />}
         />
 
 

@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 
 class Home extends Component {
-    
+    constructor(props){
+        super(props)
+    }
 
 
     render() {
         return (
+            
             <div>
-             <p>Today Is A New Begining</p>                      
-             <Parent />
+             <p>Today Is A New Begining {this.props.userName}</p>                      
+             {console.log(this.props)}
             </div>
 
            
@@ -18,25 +20,5 @@ class Home extends Component {
     }
 }
 
-function Parent() {
-    const [value, setValue] = React.useState("");
 
-    function handleChange(newValue) {
-      setValue(newValue);
-      console.log(value);
-    }
-
-    // We pass a callback to Child
-    return <Child value={value} onChange={handleChange} />;
-}
-
-function Child(props) {
-    function handleChange(event) {
-        // Here, we invoke the callback with the new value
-        props.onChange(event.target.value);
-    }
-  
-    return <input value={props.value} onChange={handleChange} />
-}
-
-export default Home
+export default Home;
