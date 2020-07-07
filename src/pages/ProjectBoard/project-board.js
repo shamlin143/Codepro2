@@ -27,22 +27,22 @@ return(
                 <h2 className="boardTitle">Project Board</h2>
                 {console.log(projects)}
                 {projects.map(project =>(
-                    <div className="cardcontainer" > 
+                    <div key={project._id} className="cardcontainer" key={project._id}> 
                         <div className="row mx-5 my-4 ">
                             <div className="card">
-                                <p key={project._id.projectName}>Project Name: {project.projectName}</p>
-                                <p key={project._id.businessType}>Business Type: {project.businessType}</p>
-                                <p key={project._id.projectDescription}>Project Description: {project.projectDescription}</p>
-                                <p key={project._id.projectFeatures}>Basic Application Features: {project.projectFeatures}</p>
-                                <p key={project._id.projectNotes}>Additional Notes: {project.projectNotes}</p>
-                                <p key={project._id.fee}>Proposed Fee: ${project.fee}</p> 
-                                <p key={project._id.email}>Contact Email: {project.email}</p>
+                                <p>Project Name: {project.projectName}</p>
+                                <p >Business Type: {project.businessType}</p>
+                                <p >Project Description: {project.projectDescription}</p>
+                                <p >Basic Application Features: {project.projectFeatures}</p>
+                                <p >Additional Notes: {project.projectNotes}</p>
+                                <p >Proposed Fee: ${project.fee}</p> 
+                                <p>Contact Email: {project.email}</p>
                             </div>
                         </div>
                     </div>
                 ))}
               
-                <SubmitProject value={projects} onClick={addProject}  />
+                <SubmitProject value={projects} onClick={() => {addProject}} userName={props.userName} />
                 
             </div>
  
