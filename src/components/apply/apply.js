@@ -8,7 +8,7 @@ import { Element } from "react-scroll";
 
 
 
-export default function applyForm() {
+export default function contactForm() {
   function send(lookUpUserbyID){
     // lookup user who posted job by id and retrieve email address
     return (
@@ -70,7 +70,7 @@ export default function applyForm() {
               type="submit"
               style={{ width: "50%", marginTop: "15px" }}
             >
-             Click to Contact me
+             Apply
             </Button>
           </div>
         </form>
