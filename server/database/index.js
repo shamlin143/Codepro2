@@ -25,7 +25,7 @@ const uri = 'mongodb://localhost:27017/simple-mern-passport'
 //         }
 //   );
   mongoose.connect(
-    process.env.MONGODB_URI_API,
+    process.env.MONGO_URI || "mongodb://Duser3:Bonus1@ds133136.mlab.com:33136/heroku_w6kv6k9d",
   );
 
 module.exports = mongoose.connection
