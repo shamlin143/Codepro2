@@ -14,11 +14,19 @@ function SubmitProject(props){
 
 
     function handleInputChange(event) {
-        const { name, value } = event.target;
-        setProject(values =>{
-        return {...values, [name]:value}  
-        });
-        console.log(project);
+        let { name, value } = event.target;
+        if (name === 'projectFeatures') {
+            value=[];
+            for (let i=0; i< event.target.selectedOptions.length; i++) {
+                value.push(event.target.selectedOptions[i].value);
+            };
+            
+        };
+        const newState={...project, [name]:value};
+        setProject(newState);
+        console.log('newState', newState);
+        console.log('event.target.selectedOptions', event.target.selectedOptions);
+        console.log('event.target', event.target);
       };
 
     function handleFormSubmit(event) {
