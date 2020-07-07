@@ -87,11 +87,11 @@ function SubmitProject(props){
                             name="projectFeatures" 
                             onChange={handleInputChange}
                         >       
-                            <option>Advertising</option>
-                            <option>Product Sales</option>
-                            <option>Scheduling Services</option>
-                            <option>Customer Service</option>
-                            <option>Customer Information Storage</option>
+                            <option>Advertising, </option>
+                            <option>Product Sales, </option>
+                            <option>Scheduling Services, </option>
+                            <option>Customer Service, </option>
+                            <option>Customer Information Storage, </option>
                             <option>Other</option>    
                         </Form.Control>
                     </Form.Group>
