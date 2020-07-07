@@ -45,9 +45,7 @@ class NavigationBar extends Component {
                         {loggedIn ? (
                             <section className="navbar-section">
                                 <Navbar bg="light" expand="lg">
-                                <Link to="/">
-                                    <Navbar.Brand className="text-center">Code Pro Connection</Navbar.Brand>
-                                </Link>
+
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav  className="mr-auto" >
