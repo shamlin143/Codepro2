@@ -24,12 +24,12 @@ function addProject(newProject){
 
 return(        
             <div className="project-board">               
-                <h2 className="mx=5">Project Board</h2>
+                <h2 className="boardTitle">Project Board</h2>
                 {console.log(projects)}
                 {projects.map(project =>(
-                    <div className="cardcontainer bg-success" > 
+                    <div className="cardcontainer" > 
                         <div className="row mx-5 my-4 ">
-                            <div className="card border-success bg-success">
+                            <div className="card">
                                 <p key={project._id.projectName}>Project Name: {project.projectName}</p>
                                 <p key={project._id.businessType}>Business Type: {project.businessType}</p>
                                 <p key={project._id.projectDescription}>Project Description: {project.projectDescription}</p>

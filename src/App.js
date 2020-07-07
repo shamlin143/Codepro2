@@ -8,6 +8,7 @@ import LoginForm from './pages/LoginForm/login-form';
 import ProjectBoard from './pages/ProjectBoard/project-board';
 import Navigationbar from './components/NavigationBar/NavigationBar';
 import Home from './pages/Home/home';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -58,7 +59,7 @@ class App extends Component {
         <Navigationbar updateUser={this.updateUser} currentUser={this.state.username} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
-          <p>Your Future Begins Now, {this.state.username}!</p>
+          <h5 className="futureTitle">Your Future Begins Now, {this.state.username}!</h5>
         }
         <Route
           path="/"
