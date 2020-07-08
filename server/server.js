@@ -1,4 +1,5 @@
 const express = require('express')
+const concurrently = require('concurrently')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const session = require('express-session')
