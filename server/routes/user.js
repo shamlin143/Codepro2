@@ -62,7 +62,6 @@ router.get('/', (req, res ) => {
     }
 });
 
-
 router.post('/logout', (req, res) => {
     if (req.user) {
         req.logout()
@@ -75,5 +74,38 @@ router.post('/logout', (req, res) => {
         });
     }
 });
+
+// Get all users
+router.route('/users').get(function(req, res)  {
+    User.find((err, users) => {
+        if(err) return res.status(422).json({"User": "No Users Found"});
+        res.json(users);
+     }); 
+});
+//Get user by id
+router.route('/users/:id').get(function(req, res){
+    User.findById(req.params.id, (err, user)=>{
+        if(err) return res.status(422).json({"User: ": "User not found"});
+        res.json(user);
+    });
+});
+// Delete user by id
+router.route('/users/:id').delete(function(req, res){
+    User.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+        if (err) return res.status(422).json({"User": "Unable to delete project"});
+        res.json(post);
+      });
+});
+
+// Update user by Id
+router.route('/:id').put(function(req, res){
+    User.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+        if (err) return res.status(422).json({"User": "Unable to update user"})
+        res.json(post);
+    });
+});
+
+
+
 
 module.exports = router
