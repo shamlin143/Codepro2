@@ -31,8 +31,8 @@ router.post('/', (req, res) => {
                 res.json(savedUser)
             })
         }
-    })
-})
+    });
+});
 
 router.post(
     '/login',
@@ -45,7 +45,8 @@ router.post(
     (req, res) => {
         console.log('logged in', req.user);
         var userInfo = {
-            username: req.user.username
+            username: req.user.username,
+            
         };
         res.send(userInfo);
     }
@@ -104,7 +105,6 @@ router.route('/:id').put(function(req, res){
         res.json(post);
     });
 });
-
 
 
 
