@@ -7,7 +7,8 @@ const passport = require('../passport')
 router.post('/', (req, res) => {
     const {
         username,
-        password
+        password,
+        email
     } = req.body
     // ADD VALIDATION
     User.findOne({
@@ -22,7 +23,8 @@ router.post('/', (req, res) => {
         } else {
             const newUser = new User({
                 username: username,
-                password: password
+                password: password,
+                email : email
             })
             newUser.save((err, savedUser) => {
                 if (err) return res.json(err)
@@ -43,7 +45,8 @@ router.post(
     (req, res) => {
         console.log('logged in', req.user);
         var userInfo = {
-            username: req.user.username
+            username: req.user.username,
+            
         };
         res.send(userInfo);
     }
@@ -73,5 +76,36 @@ router.post('/logout', (req, res) => {
         });
     }
 });
+
+router.route('/users').get(function(req, res)  {
+    User.find((err, users) => {
+        if(err) return res.status(422).json({"User": "No Users Found"});
+        res.json(users);
+     }); 
+});
+//Get user by id
+router.route('/users/:id').get(function(req, res){
+    User.findById(req.params.id, (err, user)=>{
+        if(err) return res.status(422).json({"User: ": "User not found"});
+        res.json(user);
+    });
+});
+// Delete user by id
+router.route('/users/:id').delete(function(req, res){
+    User.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+        if (err) return res.status(422).json({"User": "Unable to delete project"});
+        res.json(post);
+      });
+});
+
+// Update user by Id
+router.route('/:id').put(function(req, res){
+    User.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+        if (err) return res.status(422).json({"User": "Unable to update user"})
+        res.json(post);
+    });
+});
+
+
 
 module.exports = router

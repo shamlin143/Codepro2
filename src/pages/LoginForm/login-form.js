@@ -8,6 +8,7 @@ class LoginForm extends Component {
         this.state = {
             username: '',
             password: '',
+            email: "",
             redirectTo: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -28,7 +29,8 @@ class LoginForm extends Component {
         axios
             .post('/user/login', {
                 username: this.state.username,
-                password: this.state.password
+                password: this.state.password,
+                
             })
             .then(response => {
                 console.log('login response: ')
