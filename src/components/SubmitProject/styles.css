@@ -1,0 +1,9 @@
+.container {
+    float: right;
+   }
+.form-label {
+    color: blue;
+}
+.form.control {
+    color: deepskyblue;
+}
