@@ -20,6 +20,9 @@ app.use(
 )
 app.use(bodyParser.json())
 
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("client/build"));
+  }
 // Sessions
 app.use(
 	session({
@@ -36,8 +39,15 @@ app.use(passport.session()) // calls the deserializeUser
 
 
 // Routes
+app.use(function (req, res) {
+    res.sendFile(path.join(__dirname, "client/build/index.html"));
+	});
+
+
+
 app.use('/user', user)
 app.use('/project', project)
+
 
 // Starting Server 
 app.listen(PORT, () => {
