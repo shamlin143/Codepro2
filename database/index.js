@@ -26,6 +26,7 @@ const uri = 'mongodb://localhost:27017/simple-mern-passport'
 //   );
   mongoose.connect(
     process.env.MONGODB_URI || "mongodb://heroku_s5lff6vg:jcq5ldfunh4l0g1pnr15jscqau@ds033429.mlab.com:33429/heroku_s5lff6vg"
+                        
   );
 
 module.exports = mongoose.connection
