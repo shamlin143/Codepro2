@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 8080;
 // Route requires
 const user = require('./routes/user');
 const project = require('./routes/project');
+const path = require('path');
 
 // MIDDLEWARE
 app.use(morgan('dev'))
@@ -40,7 +41,7 @@ app.use(passport.session()) // calls the deserializeUser
 
 // Routes
 app.use(function (req, res) {
-    res.sendFile(path.join(__dirname, "client/build/index.html"));
+    res.sendFile(path.join(__dirname, "client/public/index.html"));
 	});
 
 
