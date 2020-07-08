@@ -3,7 +3,7 @@ import API from "../../utils/API";
 import { Container, Col,  Form } from 'react-bootstrap';
 import './submit-project.css';
 import {Sidebar} from '../../components/sidebar/sidebar.js';
-import { set } from "mongoose";
+
 
 
 
@@ -68,8 +68,8 @@ useEffect(async () => {
         <Sidebar >       
         <Container className="submit-project text-center">
         
-                <Form>
-                    <Form.Group>
+                <Form >
+                    <Form.Group >
                         <Form.Label>Project Name</Form.Label>
                         <Form.Control 
                             name="projectName" 
