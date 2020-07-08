@@ -6,15 +6,15 @@ import SubmitProject from "../SubmitProject/submit-project"
 export const Sidebar = ({ width, height, children }) => {
   const [xPosition, setX] = React.useState(-width);
 
-  const toggleMenu = () => {
-    if (xPosition < 0) {
+   const toggleMenu = () => {
+   if (xPosition < 0) {
       setX(0);
       console.log('xPosition', xPosition);
-    } else {
+     } else {
       setX(-width);
-      console.log('xPosition', xPosition);
+       console.log('xPosition', xPosition);
     }
-  };
+ };
 
   React.useEffect(() => {
     setX(0);
@@ -30,17 +30,17 @@ export const Sidebar = ({ width, height, children }) => {
           minHeight: height
         }}
       >
-        <button
+         {/* <button
           onClick={() => toggleMenu()}
           className="toggle-menu"
           style={{
             transform: `translate(${width}px, 20vh)`
-          }}
-        ></button>
+          }} 
+        ></button> */}
         <div className="content">{children}</div>
-      </div>
+      </div> 
       
-    </React.Fragment>
+     </React.Fragment>
   );
-};
+    }
 

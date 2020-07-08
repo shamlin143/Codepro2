@@ -1,4 +1,4 @@
-.container {
+/* .container {
     float: right;
 
 }
@@ -13,4 +13,21 @@
     width: 800px;
     height: auto;
     
+} */
+
+.sidebar {
+    float: Right;
+    object-position: initial;
+}
+.carbody {
+    float: left;
+}
+.cardcontainer {
+    border-style: double;
+    border-color: greenyellow;
+    float: left;
+}
+.boardTitle {
+    float: left;
+    margin-left: 30px;
 }

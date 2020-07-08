@@ -1,24 +1,32 @@
 .side-bar {
-    float: right;
+    float: Right;
+    object-position: top;
     height: 100% !important;
-    display: flex;
-    width: 700px;
-    flex-direction: column;
-    border-right: 1px solid;
-    border-radius: 0;
-    border-color: rgba(64, 194, 133, 0.693);
-    background-color: rgb(196, 224, 102);
-    transition: 0.8s ease;
+    border-style: double;
+    border-color: green;
+  border-width: 25px;
+  position: absolute;
+  right: 0;
+  
+    /* display: flex;
+    flex-direction: row; */
+    /* border-right: 1px solid; */
+    /* border-radius: 0; */
+    /* border-color: rgba(64, 194, 133, 0.693);
+    background-color: rgb(255, 255, 255); */
+    /* transition: 0.8s ease; */
+    /* width: flex;
+    flex-grow: sticky; */
 }
-.toggle-menu {
+/* .toggle-menu {
     height: 50px;
-    border-top-left-radius: 10rem;
-    border-bottom-left-radius: 9rem;
-    width: 20px;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 9rem;
+    width: 25px;
     position: absolute;
-    outline: none;
-    z-index: 1;
+    outline: seagreen;
+    z-index: 2;
     background-color: rgba(64, 194, 133, 0.693);
     border-color: rgba(64, 194, 133, 0.693);
-    border-left: 0;
-}
+    border-right: 0;
+} */
