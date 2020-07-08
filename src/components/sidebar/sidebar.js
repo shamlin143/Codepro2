@@ -1,7 +1,7 @@
 import { Container, Col,  Form } from 'react-bootstrap';
-import "./sidebarStyle.css";
+import "../../components/sidebar/sidebar.js";
+import "../../components/sidebar/sidebarStyle.css"
 import React from "react";
-import SubmitProject from "../SubmitProject/submit-project"
 
 export const Sidebar = ({ width, height, children }) => {
   const [xPosition, setX] = React.useState(-width);

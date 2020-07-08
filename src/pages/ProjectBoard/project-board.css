@@ -1,7 +1,16 @@
+.container {
+    float: left;
+}
+.cardcontainer {
+    float: left;
+}
+
+
 .boardTitle {
+    float: left;
     margin-left: 30px;
     
 }
-.cardcontainer {
+.card {
     background-color: rgb(196, 224, 102);
 }

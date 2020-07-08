@@ -1,7 +1,4 @@
-.container {
-    float: right;
 
-}
 .form-label {
     color: blue;
 }
@@ -12,5 +9,4 @@
 .cardcontainer {
     width: 800px;
     height: auto;
-    
 }
