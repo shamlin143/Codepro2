@@ -1,16 +1,18 @@
-.container {
-    float: right;
 
-}
 .form-label {
-    color: blue;
+    color: rgb(163, 163, 228);
 }
 .form.control {
     color: deepskyblue;
+    
 }
 
 .cardcontainer {
+    
     width: 800px;
     height: auto;
-    
+}
+.cardcontainer {
+    border-style: groove;
+    border-color: lawngreen;
 }
