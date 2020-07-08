@@ -31,8 +31,8 @@ router.post('/', (req, res) => {
                 res.json(savedUser)
             })
         }
-    })
-})
+    });
+});
 
 router.post(
     '/login',
