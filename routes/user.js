@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
             const newUser = new User({
                 username: username,
                 password: password,
-                email : email
+                email: email
             })
             newUser.save((err, savedUser) => {
                 if (err) return res.json(err)
@@ -63,7 +63,6 @@ router.get('/', (req, res ) => {
     }
 });
 
-
 router.post('/logout', (req, res) => {
     if (req.user) {
         req.logout()
@@ -77,6 +76,7 @@ router.post('/logout', (req, res) => {
     }
 });
 
+// Get all users
 router.route('/users').get(function(req, res)  {
     User.find((err, users) => {
         if(err) return res.status(422).json({"User": "No Users Found"});

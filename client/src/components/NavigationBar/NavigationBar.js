@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom'
 import { Route, Link } from 'react-router-dom'
 import { Container, Col, Navbar, Nav } from 'react-bootstrap';
 import {Button} from "react-bootstrap";
-
 import './styles.css';
 import axios from 'axios'
 
@@ -45,9 +44,7 @@ class NavigationBar extends Component {
                         {loggedIn ? (
                             <section className="navbar-section">
                                 <Navbar bg="light" expand="lg">
-                                <Link to="/">
-                                    <Navbar.Brand className="text-center">Code Pro Connection</Navbar.Brand>
-                                </Link>
+
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav  className="mr-auto" >
@@ -55,18 +52,14 @@ class NavigationBar extends Component {
                                                 <Button variant="outline-secondary">Project Board</Button>
                                             </Link>
                                             <Link to="#"  onClick={this.logout}>
-                                                <Button variant="outline-danger">Logout</Button> 
+                                                <Button variant="outline-danger" >Logout</Button> 
                                             </Link>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Navbar>
                             </section>
                         ) : (
-                            <Navbar bg="light" expand="lg">
-                                <Link to="/">
-                                    <Navbar.Brand >Code Pro Connection</Navbar.Brand>
-                                </Link>
-                                 
+                            <Navbar bg="light" expand="lg">                                 
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav  className="mr-auto" >

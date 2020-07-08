@@ -11,7 +11,8 @@ const projectSchema = new Schema({
     projectNotes: {type: String},
     fee: { type: String},
     email: {type: String, required: true},
-    date: { type: Date, default: Date.now }
+    date: { type: Date, default: Date.now },
+    applicants: { type: [Schema.Types.ObjectId], ref: "user"}
 });
 
 

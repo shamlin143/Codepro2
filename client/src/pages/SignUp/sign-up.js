@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import './sign-up.css';
 
 class Signup extends Component {
 	constructor() {
@@ -9,6 +10,7 @@ class Signup extends Component {
 			username: '',
 			password: '',
 			confirmPassword: '',
+			email: '',
 			redirectTo: null
 
 		}
@@ -28,7 +30,8 @@ class Signup extends Component {
 		//request to server to add a new username/password
 		axios.post('/user/', {
 			username: this.state.username,
-			password: this.state.password
+			password: this.state.password,
+			email: this.state.email
 		})
 			.then(response => {
 				console.log(response)
@@ -81,6 +84,20 @@ render() {
 								type="password"
 								name="password"
 								value={this.state.password}
+								onChange={this.handleChange}
+							/>
+						</div>
+					</div>
+					<div className="form-group">
+						<div className="col-1 col-ml-auto">
+							<label className="form-label" htmlFor="email">Email: </label>
+						</div>
+						<div className="col-3 col-mr-auto">
+							<input className="form-input"
+								placeholder="email (required)"
+								type="email"
+								name="email"
+								value={this.state.email}
 								onChange={this.handleChange}
 							/>
 						</div>

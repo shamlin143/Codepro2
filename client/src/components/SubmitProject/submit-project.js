@@ -1,4 +1,4 @@
-import React, {useState} from  "react";
+import React, {useState, useEffect} from  "react";
 import API from "../../utils/API";
 import { Container, Col,  Form } from 'react-bootstrap';
 import './submit-project.css';
@@ -7,12 +7,27 @@ import {Sidebar} from '../../components/sidebar/sidebar.js';
 
 
 
+
 function SubmitProject(props){
     const [project, setProject] = useState({});
+    const [user, setUser] =useState("")
     
+    console.log(props.userName)
+
+ function getUserName(){
+    return  props.userName;
+}
 
 
 
+useEffect(async () => {
+    let currentUser = await getUserName();
+    setUser(currentUser);
+    setProject({userName: currentUser});
+
+}, []);
+    
+    
     function handleInputChange(event) {
         let { name, value } = event.target;
         if (name === 'projectFeatures') {
@@ -25,7 +40,7 @@ function SubmitProject(props){
         const newState={...project, [name]:value};
         setProject(newState);
         console.log('newState', newState);
-        console.log('event.target.selectedOptions', event.target.selectedOptions);
+       
         console.log('event.target', event.target);
       };
 
@@ -37,10 +52,11 @@ function SubmitProject(props){
          }     
     }; 
 
-    function addProject() {
+    async function addProject() {
         
         if (project) {
-            API.saveProject(project)
+            
+          await  API.saveProject({...project, userName: props.userName})
             .catch(err => console.log(err));
         }
     }; 
@@ -52,8 +68,8 @@ function SubmitProject(props){
         <Sidebar >       
         <Container className="submit-project text-center">
         
-                <Form>
-                    <Form.Group>
+                <Form >
+                    <Form.Group >
                         <Form.Label>Project Name</Form.Label>
                         <Form.Control 
                             name="projectName" 
@@ -87,11 +103,11 @@ function SubmitProject(props){
                             name="projectFeatures" 
                             onChange={handleInputChange}
                         >       
-                            <option>Advertising</option>
-                            <option>Product Sales</option>
-                            <option>Scheduling Services</option>
-                            <option>Customer Service</option>
-                            <option>Customer Information Storage</option>
+                            <option>Advertising, </option>
+                            <option>Product Sales, </option>
+                            <option>Scheduling Services, </option>
+                            <option>Customer Service, </option>
+                            <option>Customer Information Storage, </option>
                             <option>Other</option>    
                         </Form.Control>
                     </Form.Group>
