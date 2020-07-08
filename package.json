@@ -21,7 +21,6 @@
     "server": "nodemon server.js",
     "build": "npm run build",
     "api": "nodemon server.js",
-    "dev": "concurrently \"cd client && react-scripts start\" \"nodemon server.js\"",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build "
   },
   "devDependencies": {
