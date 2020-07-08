@@ -25,14 +25,14 @@ if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
   }
 // Sessions
-app.use(
+/* app.use(
 	session({
 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
 		store: new MongoStore({ mongooseConnection: dbConnection }),
 		resave: false, //required
 		saveUninitialized: false //required
 	})
-)
+) */
 
 // Passport
 app.use(passport.initialize())
@@ -40,9 +40,9 @@ app.use(passport.session()) // calls the deserializeUser
 
 
 // Routes
-app.use(function (req, res) {
+/* app.use(function (req, res) {
     res.sendFile(path.join(__dirname, "client/public/index.html"));
-	});
+}); */
 
 
 
@@ -53,4 +53,4 @@ app.use('/project', project)
 // Starting Server 
 app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`)
-})
+});
