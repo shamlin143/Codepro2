@@ -59,7 +59,9 @@ class App extends Component {
         <Navigationbar updateUser={this.updateUser} userName={this.state.username} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
+
           <h5 className="futureTitle">Hello,{this.state.username}</h5>
+
         }
         <Route
           path="/"
