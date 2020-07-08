@@ -60,9 +60,7 @@ class NavigationBar extends Component {
                             </section>
                         ) : (
                             <Navbar bg="light" expand="lg">
-                                <Link to="/">
-                                    <Navbar.Brand >Code Pro Connection</Navbar.Brand>
-                                </Link>
+
                                  
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
