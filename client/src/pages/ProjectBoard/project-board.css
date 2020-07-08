@@ -1,16 +1,26 @@
-.container {
+.sidebar {
+    background-position-x: right;
+    background-position-y: top;
+    float: Right;
+    object-position: initial;
+}
+.carbody {
     float: left;
 }
+
 .cardcontainer {
     float: left;
 }
 
 
 .boardTitle {
-    float: left;
+   position:center;
     margin-left: 30px;
     
 }
 .card {
     background-color: rgb(196, 224, 102);
+}
+h2 {
+    position: center;
 }

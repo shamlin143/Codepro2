@@ -1,23 +1,23 @@
 .side-bar {
-    height: 100% !important;
-    display: flex;
-    flex-direction: row-reverse;
-    border-right: 1px solid;
-    border-radius: 0;
-    border-color: rgba(64, 194, 133, 0.693);
-    background-color: rgb(255, 255, 255);
-    transition: 0.8s ease;
-    width: 200px;
-}
-.toggle-menu {
-    height: 50px;
-    border-top-left-radius: 10rem;
-    border-bottom-left-radius: 9rem;
-    width: 25px;
     position: absolute;
-    outline: seagreen;
-    z-index: 2;
-    background-color: rgba(64, 194, 133, 0.693);
-    border-color: rgba(64, 194, 133, 0.693);
-    border-left: 0;
+    right: 0;
+    float: Right;
+    object-position: top;
+    height: 100% !important;
+    border-style: double;
+    border-width: 25px;
+    border-color: forestgreen;
+
+   
+    /* display: flex;
+    flex-direction: row; */
+    /* border-right: 1px solid; */
+    /* border-radius: 0; */
+    /* border-color: rgba(64, 194, 133, 0.693);
+    background-color: rgb(255, 255, 255); */
+    /* transition: 0.8s ease; */
+    /* width: flex;
+    flex-grow: sticky; */
+  
 }
+
