@@ -26,7 +26,7 @@
     "heroku-postbuild": "cd client && npm install && npm run build "
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
+    "concurrently": "^5.2.0", 
     "nodemon": "^1.17.5"
   }
 }
