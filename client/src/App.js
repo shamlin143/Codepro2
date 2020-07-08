@@ -87,7 +87,8 @@ class App extends Component {
             <ProjectBoard
               updateUser={this.updateUser}
               userName={this.state.username}
-            />}
+            />
+          }
         />
 
 

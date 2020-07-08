@@ -51,6 +51,9 @@ class NavigationBar extends Component {
                                             <Link to="/project-board">
                                                 <Button variant="outline-secondary">Project Board</Button>
                                             </Link>
+                                            <Link to="/addProject">
+                                                <Button variant="outline-secondary">Add Project</Button>
+                                            </Link>
                                             <Link to="#"  onClick={this.logout}>
                                                 <Button variant="outline-danger" >Logout</Button> 
                                             </Link>
