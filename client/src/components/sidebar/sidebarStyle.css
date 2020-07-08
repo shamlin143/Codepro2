@@ -1,13 +1,17 @@
 .side-bar {
+
+
     float: Right;
     object-position: top;
     height: 100% !important;
     border-style: double;
+
     border-color: green;
   border-width: 25px;
   position: absolute;
   right: 0;
   
+
     /* display: flex;
     flex-direction: row; */
     /* border-right: 1px solid; */
@@ -17,6 +21,7 @@
     /* transition: 0.8s ease; */
     /* width: flex;
     flex-grow: sticky; */
+
 }
 /* .toggle-menu {
     height: 50px;
@@ -30,3 +35,4 @@
     border-color: rgba(64, 194, 133, 0.693);
     border-right: 0;
 } */
+

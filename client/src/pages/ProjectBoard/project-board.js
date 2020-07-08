@@ -15,7 +15,7 @@ console.log(props)
 function loadProjects(){
     API.getProjects()
         .then(res => {
-            setProjects(res.data)
+        setProjects(res.data)
     })
 }
 

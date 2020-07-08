@@ -84,7 +84,7 @@ useEffect(async () => {
                             name="businessType" 
                             type="text" 
                             onChange={handleInputChange}
-                            placeholder="Enter Industry Typee"    
+                            placeholder="Enter Industry Type"    
                         />
                     </Form.Group>
                     <Form.Group>
