@@ -56,17 +56,17 @@ class App extends Component {
     return (
       <div className="App">
         <Jumbotron />
-        <Navigationbar updateUser={this.updateUser} userName={this.state.username} loggedIn={this.state.loggedIn} />
+        <Navigationbar updateUser={this.updateUser} userName={this.state.userName} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
-          <h5 className="futureTitle">Your Future Begins Now, {this.state.username}!</h5>
+          <h5 className="futureTitle">Your Future Begins Now, {this.state.userName}!</h5>
         }
         <Route
           path="/"
           render={() =>
             <Home
               updateUser={this.updateUser}
-              userName={this.state.username}
+              userName={this.state.userName}
             />}
         />
         <Route
@@ -86,7 +86,7 @@ class App extends Component {
           render={() =>
             <ProjectBoard
               updateUser={this.updateUser}
-              userName={this.state.username}
+              userName={this.state.userName}
             />}
         />
 

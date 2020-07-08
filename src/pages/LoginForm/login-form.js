@@ -8,6 +8,8 @@ class LoginForm extends Component {
         this.state = {
             username: '',
             password: '',
+            email: "",
+            userId: "",
             redirectTo: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -36,8 +38,9 @@ class LoginForm extends Component {
                 if (response.status === 200) {
                     // update App.js state
                     this.props.updateUser({
+                        
                         loggedIn: true,
-                        username: response.data.username
+                        userName: response.data.username
                     })
                     // update the state to redirect to home
                     this.setState({
@@ -63,7 +66,7 @@ class LoginForm extends Component {
                     <form className="form-horizontal">
                         <div className="form-group">
                             <div className="col-1 col-ml-auto">
-                                <label className="form-label" htmlFor="username">Username</label>
+                                <label className="form-label" htmlFor="userName">Username</label>
                             </div>
                             <div className="col-3 col-mr-auto">
                                 <input className="form-input"

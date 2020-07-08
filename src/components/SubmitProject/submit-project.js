@@ -14,14 +14,14 @@ function SubmitProject(props){
     
     console.log(props.userName)
 
- function getUserName(){
-    return  props.userName;
+ async function getUserName(){
+    return await props.userName;
 }
 
 
 
-useEffect(async () => {
-    let currentUser = await getUserName();
+useEffect( () => {
+    let currentUser =  getUserName();
     setUser(currentUser);
     setProject({userName: currentUser});
 

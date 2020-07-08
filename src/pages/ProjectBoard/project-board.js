@@ -7,9 +7,11 @@ import {Container, Col, Card, Button } from 'react-bootstrap';
 function ProjectBoard(props) {
 console.log(props)
     const [projects, setProjects] = useState([]);
+    const [user, setUser] = useState("");
 
     useEffect(() => {
         loadProjects();
+
         }, []);
 
 function loadProjects(){
@@ -23,7 +25,9 @@ function addProject(newProject){
     setProjects(newProject);
 }
 
-
+function apply() {
+    
+}
 
 return(        
             <div className="project-board">               

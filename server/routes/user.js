@@ -45,8 +45,9 @@ router.post(
     (req, res) => {
         console.log('logged in', req.user);
         var userInfo = {
-            username: req.user.username
+            username: req.user.username,
         };
+        console.log(res.data);
         res.send(userInfo);
     }
 )
@@ -56,7 +57,11 @@ router.get('/', (req, res ) => {
     console.log('===== project ======')
     console.log(req.user)
     if (req.user) {
-        res.json({ user: req.user });
+        res.json({ 
+            user: req.user,
+            userId : res.data._id,
+            email: res.data.email
+        });
     } else {
         res.json({ user: null });
     }
