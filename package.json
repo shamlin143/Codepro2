@@ -15,27 +15,7 @@
     "mongoose": "^5.9.22",
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
-<<<<<<< HEAD
     "passport-local": "^1.0.0"
-  },
-  "scripts": {
-    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "npm run server",
-    "client": "cd client && npm start",
-    "server": "node server.js",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "cd client && npm install && npm run build "
-  },
-  "devDependencies": {
-    "concurrently": "^5.2.0", 
-=======
-    "passport-local": "^1.0.0",
-    "react": "^16.2.0",
-    "react-bootstrap": "^1.1.1",
-    "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0",
-    "spectre.css": "^0.5.0"
   },
   "scripts": {
     "start:prod": "node server.js",
@@ -48,12 +28,7 @@
     "heroku-postbuild": "npm install && npm run build"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "concurrently": "^5.2.0",
-=======
-    "concurrently": "^3.6.1",
->>>>>>> ee1b74a940c5554a49120276b61da9e4889fc00a
->>>>>>> 4862bebcee3093ea14a4de2c092b4dd626aee29c
     "nodemon": "^1.17.5"
   }
 }
