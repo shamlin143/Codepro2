@@ -1,64 +1,59 @@
-## Simple MERN Passport Template
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# CodeProConnection (CPC)
+Brought to you by the Silver Foxes Group.
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+This is an app that will allow anyone with a need for a website, app or electronic media, to be connected with a freelancer.
 
-# About
-I couldn't find a simple MERN passport tutorial, so I made one!
+# Links:
+Heroku Deployment: https://cpc-project3.herokuapp.com/
 
-## Built With
+GitHub repo: https://github.com/shamlin143/Codepro2 
 
-Mongo, Express, ReactJS, Node.js, Javascript. 
+previous repo (with commit history.  we needed to rewrite the app so the histoy is continied on the above repo.): https://github.com/shamlin143/CodeProConnection
 
-## Getting Started
+# Freelancer’s Story:
+I am a freelancer that is looking for paying jobs.  I want an app that can help me find work.  CPC (CodeProConect) is a website that will allow me to connect with people that are offering me the work I am looking for.
 
-Clone the repo and follow the instructions.  You can view each step by running these commands from the terminal:
+# Requester’s Story:
+I need a website, app or some electronic media created.  I want to hire someone to create these things? CPC (CodeProConnect) is just such a place.  I can submit my project, and freelancers from all over the world will be able to apply to work for me.
 
-```
-git checkout step-0
-git checkout step-1
-...
-```
+# Motivation
+Motivation for development: We are finishing are “Coding Bootcamp” and many of us will be looking for a job.  What better way to find work. 
 
-### Prerequisites
+# Process
+Technologies used: Mongo, Express, ReactJS, NodeJS, Passport, Mongoose, HTML, JavaScript, jQuery, CSS, Script.CSS, Bootstrap. Breakdown of tasks and roles: Travis - Back end code. Add Project form. code to find Id of logged user. Scott - Styling of front end and writing of back end code. Created GitHub repository Doug - Write Models and set up routes. Deploy to Heroku. Set up .env file. . General clean up and troubleshooting.
 
-- [Node.js](https://nodejs.org/en/)
-- [MongoDB](https://www.mongodb.com/)
-- [Nodemon](https://github.com/remy/nodemon)
-- [create-react-app](https://github.com/facebook/create-react-app)
+# Challenges:
+Deploying to Heroku.
+Adding Passport authentication.
+Creating a change of “state” of a parent with a child. 
+Changing file structure to traditional client/server style.  We started with an untraditional file structure.
 
-### Installing
+# Successes
+We became more comfortable with React, and how easy it is to add pages and components.
+Much more familiar with “package.json”, “nodeModules” and deploying to “Heroku.
+We learned how to organize and reorganize file structures to meet the “Create-React-App” format.
 
-Run these commands in the terminal:
+# Components
+Add where needed info of the site and what it does and how to navigate to the components as necessary.
 
-```
-cd simple-mern-passport
-npm install
-npm run dev
-```
+sign-up page: freelancer sign-up and employer-sign-up (this will got to freelance or business forms.)
 
-# Instructions
+freelancer page (listing of all jobs)  (apply button TBD)
 
-Complete instructions at https://medium.com/@brendt_bly/simple-mern-passport-app-tutorial-4aec2105e367
+business page (show freelancers that apply) TBD
 
-### Completed Features
+login page: login (this will go to either freelance or business page)
 
-- [ ] Sign up, login and logout.
-- [ ] Authentication with passport and bcryptjs.
-- [ ] Session information stored with express sessions.
-- [ ] Store data for production in sessions with connect-mongo
+# Future Development
+Add Code to allow user to change their password or create a new one if they lose it.
+Add a database to track projects and who has applied to them.
+Add a square module to allow for a sign up fee.
+Improve design of colors and tables.
+Functionality to sort through projects.
 
-### Next Steps
-- [ ] Add redux
+# Databases
+users: unique _ID, name, email, password, identifier for freelancer or employer
 
-## Author
+Projects: unique _ID, Project Features, Project Name, project Type, project description, project notes, fee, email, date.
 
-Brendt Bly
-
-## Acknowledgments
-
-Thanks to the people who provided great examples:
-https://code.tutsplus.com/tutorials/authenticating-nodejs-applications-with-passport--cms-21619
-
-https://github.com/thechutrain/mern-passport
+Sessions: ID, expires, session("cookie")
