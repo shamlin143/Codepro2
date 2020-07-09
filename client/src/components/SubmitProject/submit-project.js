@@ -137,7 +137,6 @@ useEffect(async () => {
                             placeholder="email (required)"    
                         />
                     </Form.Group>
-
                     <button className="btn btn-success" onClick={addProject}>Submit</button>
                 </Form>            
         </Container>
