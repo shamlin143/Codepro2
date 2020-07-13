@@ -10,7 +10,7 @@ class Home extends Component {
         return (
             
             <div >
-             <h5 className='greeting'>Today Is A New Begining {this.props.userName}</h5>                      
+             <h3 className='greeting'>Today Is A New Begining!</h3>                      
              {console.log(this.props)}
             </div>
 

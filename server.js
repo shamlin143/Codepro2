@@ -1,5 +1,4 @@
 const express = require('express')
-const concurrently = require('concurrently')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const session = require('express-session')
@@ -20,11 +19,19 @@ app.use(
 		extended: false
 	})
 )
-app.use(bodyParser.json())
+
+
+
+// Configuration
+app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false}));
+// app.use('/', routes);
 
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
   }
+
+//   app.get('*');
 // Sessions
 app.use(
 	session({
@@ -49,6 +56,10 @@ app.use(passport.session()) // calls the deserializeUser
 
 app.use('/user', user)
 app.use('/project', project)
+
+// mongoose.connect(
+//     process.env.MONGODB_URI || "mongodb://DBuser5:Bonus1@ds243717.mlab.com:43717/heroku_j7j6tlfq", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true  }
+//   );
 
 
 // Starting Server 

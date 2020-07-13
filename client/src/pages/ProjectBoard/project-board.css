@@ -10,16 +10,18 @@
 
 .cardcontainer {
     float: left;
+
 }
 
 
 .boardTitle {
-   position:center;
+    position:center;
     margin-left: 30px;
-    
+    font-weight: bold;
+       
 }
 .card {
-    background-color: rgb(196, 224, 102);
+    background-color: rgb(28, 44, 18);
 }
 h2 {
     position: center;

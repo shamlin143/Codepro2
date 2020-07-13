@@ -48,12 +48,16 @@ class NavigationBar extends Component {
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav  className="mr-auto" >
-                                            <Link to="/project-board">
-                                                <Button variant="outline-secondary">Project Board</Button>
+                                            <Link to="/project-board" >
+                                                <Button variant="outline-secondary" className="btnRoute">Project Board</Button>
                                             </Link>
+                                            {/* <Link to="#"  onClick={this.logout}>
+                                                <Button variant="outline-danger" className="btnRoute">Add New Project</Button> 
+                                            </Link> */}
                                             <Link to="#"  onClick={this.logout}>
-                                                <Button variant="outline-danger" >Logout</Button> 
+                                                <Button variant="outline-danger" className="btnRoute">Logout</Button> 
                                             </Link>
+
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Navbar>
@@ -63,9 +67,9 @@ class NavigationBar extends Component {
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav  className="mr-auto" >
-                                        <Link to="/"
+                                        {/* <Link to="/"
                                             ><Button variant="outline-primary">Home</Button>
-                                        </Link>
+                                        </Link> */}
                                         <Link to="/login">
                                                 <Button variant="outline-secondary">Login</Button>
                                         </Link>

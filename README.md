@@ -8,7 +8,7 @@ Heroku Deployment: https://cpc-project3.herokuapp.com/
 
 GitHub repo: https://github.com/shamlin143/Codepro2 
 
-previous repo (with commit history.  we needed to rewrite the app so the histoy is continied on the above repo.): https://github.com/shamlin143/CodeProConnection
+previous repo (with commit history.  we needed to rewrite the app so the histoy is continued on the above repo.  https://github.com/shamlin143/CodeProConnection
 
 # Freelancer’s Story:
 I am a freelancer that is looking for paying jobs.  I want an app that can help me find work.  CPC (CodeProConect) is a website that will allow me to connect with people that are offering me the work I am looking for.
