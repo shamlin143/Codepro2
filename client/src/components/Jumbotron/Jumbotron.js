@@ -11,7 +11,7 @@ const CPCJumbotron = () =>{
         
         <Jumbotron className="text-center">
             <div className="content">
-                <h1>Code Pro Connection</h1>
+                <p className="titleBar">Code Pro Connection</p>
             </div>
         </Jumbotron>
 

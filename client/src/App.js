@@ -6,6 +6,7 @@ import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Signup from './pages/SignUp/sign-up'
 import LoginForm from './pages/LoginForm/login-form';
 import ProjectBoard from './pages/ProjectBoard/project-board';
+// import addNewProject from './pages/addNewProject/addNewProject';
 import Navigationbar from './components/NavigationBar/NavigationBar';
 import Home from './pages/Home/home';
 import './App.css';
@@ -60,7 +61,7 @@ class App extends Component {
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
 
-          <h5 className="futureTitle">Hello,{this.state.username}</h5>
+          <h3 className="futureTitle">Hello, {this.state.username}</h3>
 
         }
         <Route
@@ -71,6 +72,14 @@ class App extends Component {
               userName={this.state.username}
             />}
         />
+        {/* <Route
+          path="/addNewProject"
+          render={() =>
+            <addNewProject
+              updateUser={this.updateUser}
+              userName={this.state.username}
+            />}
+        /> */}
         <Route
           path="/login"
           render={() =>
@@ -89,10 +98,10 @@ class App extends Component {
             <ProjectBoard
               updateUser={this.updateUser}
               userName={this.state.username}
-            />
+            /> 
           }
         />
-
+        
 
       </div>
     );

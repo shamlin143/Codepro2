@@ -1,4 +1,4 @@
-import { Container, Col,  Form } from 'react-bootstrap';
+// import { Container, Col,  Form } from 'react-bootstrap';
 import "../sidebar/sidebarStyle.css";
 import React from "react";
 
@@ -25,7 +25,7 @@ export const Sidebar = ({ width, height, children }) => {
       <div
         className="side-bar"
         style={{
-          transform: `translatex(${xPosition}px)`,
+          transform: `translateX(${xPosition}px)`,
           width: width,
           minHeight: height
         }}

@@ -36,21 +36,15 @@ return(
                             
                                 <Card>
                                     <Card.Body>
-                                        <Card.Title>{project.projectName}</Card.Title>
-                                        <Card.Subtitle> {project.businessType}</Card.Subtitle>
-                                        <Card.Text>
-                                            {project.projectDescription}
-                                            
-                                        </Card.Text>
-                                        <Card.Subtitle>
-                                            Basic Application Features: {project.projectFeatures}
-                                        </Card.Subtitle>
-                                        <Card.Text>
-                                        {project.projectNotes}
-                                        </Card.Text>
-                                        <Card.Subtitle>Proposed Fee: ${project.fee}</Card.Subtitle>
+                                        <Card.Title>Project Name:  {project.projectName}</Card.Title>
+                                        <Card.Text className="m-2"> Business Type: {project.businessType}</Card.Text>
+                                        <Card.Text className="m-2">Project Description:  {project.projectDescription}</Card.Text>
+                                        <Card.Text className="m-2">Basic Application Features:  {project.projectFeatures}</Card.Text>
+                                        <Card.Text className="m-2">Notes:  {project.projectNotes}</Card.Text>
+                                        <Card.Text className="m-2">Proposed Fee:  ${project.fee}</Card.Text>
+                                        <Card.Text className="m-2">Email:  {project.email}</Card.Text>
                                     </Card.Body>
-                                        <Button variant={"danger"}> Apply</Button>
+                                        <Button variant={"danger"} className="m-3 bg-warning"> Apply</Button>
                                 </Card>
                            
                         </div>

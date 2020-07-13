@@ -93,7 +93,7 @@ useEffect(async () => {
                             name="projectDescription" 
                             onChange={handleInputChange}
                             placeholder="Describe the  desired application"    
-                            rows="5"
+                            rows="2"
                         />
                     </Form.Group>
                     <Form.Group>
@@ -101,8 +101,7 @@ useEffect(async () => {
                         <Form.Control 
                             as="select" multiple
                             name="projectFeatures" 
-                            onChange={handleInputChange}
-                        >       
+                            onChange={handleInputChange}                        >       
                             <option>Advertising, </option>
                             <option>Product Sales, </option>
                             <option>Scheduling Services, </option>
@@ -116,7 +115,7 @@ useEffect(async () => {
                         <Form.Control as ="textarea"
                             name="projectNotes"  
                             onChange={handleInputChange}
-                            rows="3"
+                            rows="2"
                         />
                     </Form.Group>
                     <Form.Group>
